@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary: #027d8f;
+  --secondary: #09be9c;
+  --accent: #83d374;
+  --highlight: #c6e12e;
+  --light: #faf070;
+  --action1: #3a91c1;
+  --action2: #aa8bf7;
+  --action3: #ff5715;
+  --action4: #d00d1e;
+  --neutral: #f5edef;
+  --dark: #0f0a0a;
+  --font-main: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--neutral);
+  color: var(--dark);
+}
+.hero {
+  position: relative;
+  background-image: url('../assets/team.jpg'); 
+  background-size: cover;
+  background-position: center 13%;
+  height: 600px; 
+  color: var(--primary);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  text-align: center;
+  z-index: 2; 
+}
+
+.hero-text h2,
+.hero-text p {
+  font-weight: bold;
+  margin: 0.2rem 0;
+
+  font-size: 30px;
+}
+.team-section {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: var(--neutral);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  color: var(--primary);
+  margin: 0.5rem 0;
+  font-size: 1.8rem
+}
+
+.team-member p.role {
+  color: var(--secondary);
+  margin: 0.2rem 0;
+  font-weight: bold;
+    font-size: 1.2rem;
+}
+.team-member p {
+  font-size: 1rem; 
+  line-height: 1.5; 
+  color: var(--dark);
+  margin-top: 0.5rem;
+}
+
+footer {
+  background-color: var(--dark);
+  color: var(--neutral);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
